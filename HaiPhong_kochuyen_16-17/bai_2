@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+const int N=1e7+1;
+int prime[N],a[N],p,q;
+void snt () {
+    for(int i=0;i<N;++i) prime[i]=1;
+    prime[0]=prime[1];
+    for(int i=2;i*i<N;++i) {
+        if(prime[i]) {
+            for(int j=i*i; j<N;j+=i)
+                prime[j]=0;
+        }
+    }
+}
+int dao_nguoc(int n) {
+    int res=0;
+    while (n>0) {
+        res+=n%10;
+        n/10;
+    }
+    return res;
+}
+void dao () {
+ for(int i=1;i<=N;++i){
+    i =dao_nguoc(i);
+    if (prime[i]) a[i]=1;
+    else a[i]=0;
+ }
+}
+int main () {
+     cin>>p>>q;
+    snt();
+    dao();
+
+    int n = p-q+1;
+    int pre[n],cnt=0;
+    for(int i=p;i<=q;++i) {
+      cnt+=a[i];
+    }
+    cout<<cnt<<endl;
+}
+
