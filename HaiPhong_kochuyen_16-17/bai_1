@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+string s;
+int cnt=0;
+int main () {
+    cin>>s;
+    for(char c:s) {
+        if (('c'>=97&&'c'<=122)||('c'>=60&&'c'>=90))
+            cnt++;
+    }
+    cout<<cnt<<endl;
+}
+//97-122 a
+//65-90 A
