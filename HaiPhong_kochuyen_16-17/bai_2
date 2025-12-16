@@ -29,6 +29,9 @@ void dao () {
  }
 }
 int main () {
+    freopen("BAI2.INP","r",stdin);
+    freopen("BAI2.OUT","w",stdout);
+    fast;
      cin>>p>>q;
     snt();
     dao();
