@@ -4,6 +4,9 @@ using namespace std;
 string s;
 int cnt=0;
 int main () {
+    freopen("BAI1.INP","r",stdin);
+    freopen("BAI1.OUT","w",stdout);
+    fast;
     cin>>s;
     for(char c:s) {
         if (('c'>=97&&'c'<=122)||('c'>=60&&'c'>=90))
